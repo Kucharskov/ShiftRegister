@@ -1,0 +1,31 @@
+#######################################
+# Syntax Coloring Map For LiquidCrystal
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+ShiftRegister	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+update	KEYWORD2
+clear	KEYWORD2
+push	KEYWORD2
+invert	KEYWORD2
+reverse	KEYWORD2
+setAutoUpdate	KEYWORD2
+setLength	KEYWORD2
+getLength	KEYWORD2
+setPin	KEYWORD2
+getPin	KEYWORD2
+invertPin	KEYWORD2
+loadData	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
