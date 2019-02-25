@@ -14,11 +14,11 @@ ShiftRegister::ShiftRegister(unsigned int data, unsigned int clk, unsigned int l
   pinMode(latchPin, OUTPUT);
   pinMode(dataPin, OUTPUT);
   pinMode(clockPin, OUTPUT);
-  regArray = new bool[length];
+  regArray = (bool *) calloc(length, sizeof(bool));
 };
 
 ShiftRegister::~ShiftRegister() {
-  delete[] regArray;
+  free(regArray);
 }
 
 void ShiftRegister::update() {
@@ -73,10 +73,10 @@ void ShiftRegister::setAutoUpdate(bool mode) {
 void ShiftRegister::setLength(unsigned int newLength) {
   if(newLength <= 0 || newLength == length) return;
   
-  delete[] regArray;
+  free(regArray);
   
   length = newLength;
-  regArray = new bool[length];
+  regArray = (bool *) calloc(length, sizeof(bool));
   
   if(autoUpdate) update();
 }
