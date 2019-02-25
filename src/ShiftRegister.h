@@ -26,25 +26,25 @@ class ShiftRegister {
     bool isCorrectPin(unsigned int pin);
 
   public:
-  	ShiftRegister(unsigned int data, unsigned int clk, unsigned int latch);
-  	~ShiftRegister();
+    ShiftRegister(unsigned int data, unsigned int clk, unsigned int latch);
+    ~ShiftRegister();
    
-  	void update();
+    void update();
     void clear();
     void push(bool bit);
     void invert();
     void reverse();
 
     void setAutoUpdate(bool mode);
-  	void setLength(unsigned int newLength);
-  	unsigned int getLength();
+    void setLength(unsigned int newLength);
+    unsigned int getLength();
     
-  	void setPin(unsigned int pin, bool value);
+    void setPin(unsigned int pin, bool value);
     bool getPin(unsigned int pin);
-  	void invertPin(unsigned int pin);
+    void invertPin(unsigned int pin);
     
-  	void loadData(unsigned int data);
-  	void loadData(bool * data, unsigned int length);
+    void loadData(unsigned int data);
+    void loadData(bool * data, unsigned int length);
 };
 
 #endif
